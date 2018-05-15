@@ -1,0 +1,25 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "example app",
+  "main": "index.html",
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "nodemon": "^1.17.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "try running npm test in the same directory as your package.json).",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SolJCam/nodePractice.git"
+  },
+  "author": "Sol Cameron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SolJCam/nodePractice/issues"
+  },
+  "homepage": "https://github.com/SolJCam/nodePractice#readme"
+}
