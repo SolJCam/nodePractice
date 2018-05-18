@@ -2,13 +2,15 @@
   "name": "demo",
   "version": "1.0.0",
   "description": "example app",
-  "main": "index.html",
+  "main": "index.js",
   "dependencies": {
     "axios": "^0.18.0",
     "eslint": "^4.19.1",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
     "nodemon": "^1.17.4"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "try running npm test in the same directory as your package.json).",
     "start": "node server.js"
