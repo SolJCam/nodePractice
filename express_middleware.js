@@ -2,14 +2,38 @@ const express = require('express');
 const app = express();
 
 
+//here lies middleware. 'next' parameter instructs server to move to the next function... 
+app.use('/css', express.static(__dirname +'/public'));
 
-app.use('/use', (req, res)=>{
+app.use((req, res, next)=>{
+
+    console.log('middleware');
+
+    next();
 
 });
 
+
+//here ends middleware.
 app.get('/', (req, res)=>{
 
-    res.send('<p>This lecture is about node express middleware</p>');
+    //res.send('<p>This lecture is about node express middleware</p>');
+
+    res.send(`
+    <link rel='stylesheet' href='/css/styles.css'> 
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur, 
+        adipisicing elit. Minus, 
+        neque quibusdam quos accusamus accusantium explicabo inventore ad ut tenetur illum libero, 
+        molestiae,
+        amet sunt voluptas suscipit. Voluptate magnam saepe ex!</p>
+    
+</body>
+</html>
+    `);
 
 
 });
