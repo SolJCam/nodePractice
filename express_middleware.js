@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
 
+//here lies middleware: code that can be deployed before the server executes the http request  
 
-//here lies middleware. 'next' parameter instructs server to move to the next function... 
+// why is this path - /css - necessary to read file  
 app.use('/css', express.static(__dirname +'/public'));
-
+        //'next' argument instructs server to move to the next request...
 app.use((req, res, next)=>{
 
     console.log('middleware');
@@ -20,7 +21,7 @@ app.get('/', (req, res)=>{
     //res.send('<p>This lecture is about node express middleware</p>');
 
     res.send(`
-    <link rel='stylesheet' href='/css/styles.css'> 
+    <link rel='stylesheet' href='/css/styles.css'>
     <title>Document</title>
 </head>
 <body>
